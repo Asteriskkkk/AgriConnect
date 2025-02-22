@@ -8,6 +8,7 @@ import Applayout  from './components/Layout.jsx'
 import './i18n.js'
 import Schemes from './pages/Schemes.jsx';
 import SchemeDetails from './pages/SchemeDetails.jsx';
+import Admin from './pages/Admin.jsx';
 
 const root = document.getElementById("root");
 
@@ -24,6 +25,7 @@ ReactDOM.createRoot(root).render(
         <Route path="/" element={<Applayout />}>
           <Route index element={<App />} /> 
           <Route path="/search" element={<Schemes />} />
+          <Route path='/admin' element={<Admin/>}/>
           <Route path="/search/:id" element={<SchemeDetails />} />
         </Route>
       </Routes>

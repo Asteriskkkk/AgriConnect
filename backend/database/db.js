@@ -3,7 +3,7 @@ const { schemeSchema } = require('./schemes')
 const { SchemeDetails } = require('./schemeDetails')
 
 // Define connections
-const schemesDB = mongoose.createConnection("mongodb+srv://amitlpatil282006:azaDXBYoOz7ryKwI@cluster1.h8gyl.mongodb.net")
+const schemesDB = mongoose.createConnection("mongodb+srv://amitlpatil282006:azaDXBYoOz7ryKwI@cluster1.h8gyl.mongodb.net/")
 
 // Bind models to specific connections
 const schemes = schemesDB.model("schemes", schemeSchema , 'schemes');

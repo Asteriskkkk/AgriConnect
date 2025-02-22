@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(cors());
 
 
-mongoose.connect('mongodb+srv://amitlpatil282006:azaDXBYoOz7ryKwI@cluster1.h8gyl.mongodb.net')
+mongoose.connect('mongodb+srv://amitlpatil282006:azaDXBYoOz7ryKwI@cluster1.h8gyl.mongodb.net/')
+
 
 app.get('/schemes', async (req, res) => {
 
@@ -27,7 +28,7 @@ app.get('/schemes/:id', async (req, res) => {
     try {
         const id = String(req.params.id);
         const allSchemes = await  SchemeDetails.find({id});
-
+        console.log(allSchemes);
         res.json(allSchemes);  // Send JSON response
     } catch (error) {
         console.error("Error fetching schemes:", error);
